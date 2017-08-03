@@ -15,6 +15,17 @@
                 <td>Acciones</td>
             </tr>
         </thead>
+        <tbody>
+            @foreach ($products as $product)
+            <tr>
+                <td>{{ $product->id  }}</td>
+                <td>{{ $product->title  }}</td>
+                <td>{{ $product->description  }}</td>
+                <td>{{ $product->pricing  }}</td>
+                <td> Acciones  </td>
+            </tr>
+            @endforeach
+        </tbody>
     </table>
 </div>
 @endsection
