@@ -15,4 +15,17 @@ Route::get('/', 'MainController@home');
 
 Auth::routes();
 
+Route::resource('products','ProductsController');
+
+/*
+ * GET /products => index
+ * POST /products => store
+ * GET /products/create => Formulario para crear
+ * 
+ * GET /products/:id => mostrar un producto con ID
+ * GET /products/:id/edit
+ * PUT/PATCH /products/:id
+ * DELETE /products/:id
+ */
+
 Route::get('/home', 'HomeController@index')->name('home');
