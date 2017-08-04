@@ -22,7 +22,11 @@
                 <td>{{ $product->title  }}</td>
                 <td>{{ $product->description  }}</td>
                 <td>{{ $product->pricing  }}</td>
-                <td> Acciones  </td>
+                <td> 
+                   <a href="{{url('/products/'.$product->id.'/edit')}}">
+                       Editar
+                   </a>
+                </td>
             </tr>
             @endforeach
         </tbody>

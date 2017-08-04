@@ -26,7 +26,8 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view("products.create");
+        $product = new Product;
+        return view("products.create",["product" => $product]);
     }
 
     /**
@@ -69,7 +70,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view("products.edit",["product" => $product]);
     }
 
     /**
