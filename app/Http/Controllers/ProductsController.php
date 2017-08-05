@@ -43,7 +43,7 @@ class ProductsController extends Controller
         $product->description = $request->description;
         $product->pricing = $request->pricing;
         $product->user_id = Auth::user()->id;
-        
+
         if($product->save()){
             return redirect("/products");
         }else{
@@ -83,7 +83,17 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $product = Product::find($id);
+
+      $product->title = $request->title;
+      $product->description = $request->description;
+      $product->pricing = $request->pricing;
+
+      if($product->save()){
+          return redirect("/products");
+      }else{
+          return redirect("products.edit",["product" => $product]);
+      }
     }
 
     /**
