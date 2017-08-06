@@ -4,8 +4,7 @@
 <div class="container white">
     <h1>Nuevo Producto</h1>
     <!-- Formulario -->
-    @include('products.form',['product' => $product, 'url' => '/
-    products', 'method' => 'POST'])
+    @include('products.form',['product' => $product, 'url' => '/products', 'method' => 'POST'])
 </div>
 @endsection
 
