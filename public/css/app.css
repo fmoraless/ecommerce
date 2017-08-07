@@ -1,7 +1,3 @@
-body {
-  background-color: red;
-}
-
 .navbar {
   margin-bottom: 0px;
 }
@@ -46,10 +42,31 @@ body {
   background-color: white;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .floating {
   position: fixed;
   bottom: 2em;
   right: 2em;
   z-index: 100;
+}
+
+.product {
+  width: 600px;
+  max-width: 100%;
+  padding: 1em;
+  position: relative;
+}
+
+.product h1 {
+  padding-bottom: 10px;
+  border-bottom: solid 1px;
+}
+
+.product .actions {
+  right: 1em;
+  top: 10px;
 }
 
